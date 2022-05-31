@@ -1,0 +1,10 @@
+{
+  "params": {
+    "app_name": "abc",
+    "logo" : "logo.jpg" ,
+    "admin_user" : "admin" ,
+    "admin_password" : "admin",
+    "emp_user" : "kkwagh" ,
+    "emp_password" : "kkwagh123"
+  }
+}

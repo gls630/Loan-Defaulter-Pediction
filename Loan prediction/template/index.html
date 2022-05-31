@@ -1,0 +1,225 @@
+{% extends "basic.html" %}
+{% block body %}
+<style>
+  body {
+   background: url(' {{url_for('static',filename='img/form.jpg')}} ') no-repeat center center fixed;
+  }
+
+  #upload {
+    background-color: rgb(51, 0, 255);
+  }
+ .form-label {
+  font-weight: bold;
+  color:#fff;
+  
+ 
+  }
+  .container{
+  padding: 30px;
+  background-color: #000;
+  width:500px;
+  height:200%;
+  margin-left:500px;
+  }
+  /* Full-width input fields */
+input[type=text],[type=number], input[type=password],select {
+  width: 100%;
+  padding: 5px;
+  margin: 5px;
+  display: inline;
+  border: none;
+  background: #f1f1f1;
+
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+ .btn-primary
+{
+background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  margin: 2px 0;
+  border: none;
+  cursor: pointer;
+  width: 50%;
+  display:inline-block;
+  opacity: 0.9;
+  margin-top:35px;
+  float:center;
+  margin-right:25%;
+  margin-bottom:50%;
+  }
+   .btn-primary:hover {
+  opacity: 1;
+}
+</style>
+<body>
+<center><h1 style="margin-top:20px;font-family:Times New Roman, Times, serif;font-size:70px;">Customer Details</h1></center>
+<div class="container" id="form">
+
+  <form action="/prediction" method="post">
+    
+      
+          
+          <label for="Income" class="form-label">Income</label>
+          <input type="number" name="Income" min="999" class="form-control" id="Income" placeholder="Income > 1000"><br>
+         
+
+       <label for="Age" class="form-label">Age</label>
+          <input type="number" name="Age" class="form-control" id="Age" placeholder="Age "><br>
+       
+
+       <label for="Experience" class="form-label">Experience</label>
+          <input type="number" name="Experience" class="form-control" id="Experience" placeholder="Experience "><br>
+
+
+
+        <label for="House_Ownership" class="form-label">House_Ownership</label>
+          <select name="House_Ownership" id="House_Ownership">
+              <option selected>select </option>
+              <option value="2">rented</option>
+              <option value="1">owned</option>
+              <option value="0">norent_noown</option>
+
+            </select><br>
+
+        <label for="Car_Ownership" class="form-label">Car_Ownership</label>
+          <select name="Car_Ownership" id="Car_Ownership">
+              <option selected>select </option>
+
+              <option value="1">Owned</option>
+              <option value="0">No Car</option>
+
+            </select><br>
+
+        <label for="CURRENT_JOB_YRS" class="form-label">CURRENT_JOB_YRS</label>
+          <input type="number" name="CURRENT_JOB_YRS" class="form-control" id="CURRENT_JOB_YRS"
+              placeholder="CURRENT_JOB_YRS "><br>
+       
+
+        <label for="CURRENT_HOUSE_YRS" class="form-label">CURRENT_HOUSE_YRS</label>
+          <input type="number" name="CURRENT_HOUSE_YRS" class="form-control" id="CURRENT_HOUSE_YRS"
+              placeholder="CURRENT_HOUSE_YRS "> <br>
+     
+	  <label for="marraige" class="form-label">Marraige</label>
+          <select name="marraige" id="marraige">
+              <option selected>select</option>
+              <option value="1">Single</option>
+              <option value="0">Married</option>
+            </select><br>
+        
+
+      <label for="Profession" class="form-label">Profession</label>
+          <select name="Profession" id="Profession">
+              <option selected>select</option>
+
+              <option value="Physician">Physician</option>
+              <option value="Statistician">Statistician</option>
+              <option value="Web_designer">Web_designer</option>
+              <option value="Psychologist">Psychologist</option>
+              <option value="Computer_hardware_engineer">Computer_hardware_engineer</option>
+              <option value="Drafter">Drafter</option>
+              <option value="Magistrate">Magistrate</option>
+              <option value="Fashion_Designer">Fashion_Designer</option>
+              <option value="Air_traffic_controller">Air_traffic_controller</option>
+              <option value="Comedian">Comedian</option>
+              <option value="Industrial_Engineer">Industrial_Engineer</option>
+              <option value="Mechanical_engineer">Mechanical_engineer</option>
+              <option value="Chemical_engineer">Chemical_engineer</option>
+              <option value="Technical_writer">Technical_writer</option>
+              <option value="Hotel_Manager">Hotel_Manager</option>
+              <option value="Financial_Analyst">Financial_Analyst</option>
+              <option value="Graphic_Designer">Graphic_Designer</option>
+              <option value="Flight_attendant">Flight_attendant</option>
+              <option value="Biomedical_Engineer">Biomedical_Engineer</option>
+              <option value="Secretary">Secretary</option>
+              <option value="Software_Developer">Software_Developer</option>
+              <option value="Petroleum_Engineer">Petroleum_Engineer</option>
+              <option value="Police_officer">Police_officer</option>
+              <option value="Computer_operator">Computer_operator</option>
+              <option value="Politician">Politician</option>
+              <option value="Microbiologist">Microbiologist</option>
+              <option value="Technician">Technician</option>
+              <option value="Artist">Artist</option>
+              <option value="Lawyer">Lawyer</option>
+              <option value="Consultant">Consultant</option>
+              <option value="Dentist">Dentist</option>
+              <option value="Scientist">Scientist</option>
+              <option value="Surgeon">Surgeon</option>
+              <option value="Aviator">Aviator</option>
+              <option value="Technology_specialist">Technology_specialist</option>
+              <option value="Design_Engineer">Design_Engineer</option>
+              <option value="Surveyor">Surveyor</option>
+              <option value="Geologist">Geologist</option>
+              <option value="Analyst">Analyst</option>
+              <option value="Army_officer">Army_officer</option>
+              <option value="Architect">Architect</option>
+              <option value="Chef">Chef</option>
+              <option value="Librarian">Librarian</option>
+              <option value="Civil_engineer">Civil_engineer</option>
+              <option value="Designer">Designer</option>
+              <option value="Economist">Economist</option>
+              <option value="Firefighter">Firefighter</option>
+              <option value="Chartered_Accountant">Chartered_Accountant</option>
+              <option value="Civil_servant">Civil_servant</option>
+              <option value="Official">Official</option>
+              <option value="Engineer">Engineer</option>
+
+
+            </select> <br>
+       
+
+        <label for="CITY" class="form-label">CITY</label>
+          <select name="CITY" id="CITY">
+              <option selected>select</option>
+
+
+              <option value="other">other</option>
+              <option value="Bhopal">Bhopal</option>
+              <option value="Bulandshahr">Bulandshahr</option>
+              <option value="Saharsa[29]">Saharsa[29]</option>
+              <option value="Vijayawada">Vijayawada</option>
+              <option value="Srinagar">Srinagar</option>
+              <option value="Indore">Indore</Profession <option value="New_Delhi1098">New_Delhi1098</option>
+              <option value="Hajipur[31]">Hajipur[31]</option>
+              <option value="Satara">Satara</option>
+              <option value="Navi_Mumb">Navi_Mumb</option>
+              <option value="Jorhat">Jorhat</option>
+              <option value="Ongole">Ongole</option>
+              <option value="Bellary">Bellary</option>
+              <option value="Erode[17]">Erode[17]</option>
+              <option value="Giridih">Giridih</option>
+              <option value="Hospet">Hospet</option>
+              <option value="Jodhpur">Jodhpur</option>
+              <option value="Khammam">Khammam</option>
+              <option value="Danapur">Danapur</option>
+              <option value="Bareilly">Bareilly</option>
+              <option value="Kolkata">Kolkata</option>
+              <option value="Bidhannagar">Bidhannagar</option>
+              <option value="Satna">Satna</option>
+              <option value="Mango">Mango</option>
+              <option value="Howrah">Howrah</option>
+              <option value="Agra">Agra</option>
+              <option value="Thanjavur">Thanjavur</option>
+              <option value="Harid">Haridwar</option>
+
+
+            </select>
+
+    <button class="btn btn-primary float-end" type="submit" id="msg">Predict</button>
+
+  </form>
+</div>
+</body>
+</html>
+<!-- <script>
+        let msg = document.getElementById('msg')
+msg.addEventListener('click',function(){
+  alert('Your Image file successfully submited. Wait for the prediction');  
+document.location = '/prediction'
+});
+</script> -->
+{% endblock %}
